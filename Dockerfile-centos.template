@@ -20,8 +20,6 @@ RUN yum install -y epel-release && \
         proj-devel \
         udunits2-devel
 
-ENV PATH="/opt/rh/devtoolset-8/root/usr/bin:$PATH"
-
 RUN R -e 'install.packages(c("rmarkdown", "shiny"), \
     dependencies = TRUE, Ncpus = 4, repos = "http://cloud.r-project.org")'
 
