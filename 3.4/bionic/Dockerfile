@@ -22,7 +22,9 @@ RUN apt-get update -qq && \
     libxml2-dev \
     libudunits2-dev \
     libxt-dev \
-    make
+    make \
+    xorg \
+    xvfb
 
 RUN R -e 'install.packages(c("rmarkdown", "shiny"), \
     dependencies = TRUE, Ncpus = 4, repos = "http://cloud.r-project.org")'

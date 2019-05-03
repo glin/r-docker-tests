@@ -19,7 +19,9 @@ RUN zypper --non-interactive --gpg-auto-import-keys -n install \
     libjpeg8-devel \
     libopenssl-devel \
     libxml2-devel \
-    make
+    make \
+    xorg-x11-server \
+    xvfb-run
 
 RUN R -e 'install.packages(c("rmarkdown", "shiny"), \
     dependencies = TRUE, Ncpus = 4, repos = "http://cloud.r-project.org")'

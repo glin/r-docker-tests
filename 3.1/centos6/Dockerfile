@@ -15,7 +15,9 @@ RUN yum -y update && \
     libcurl-devel \
     libjpeg-turbo-devel \
     libxml2-devel \
-    openssl-devel
+    openssl-devel \
+    xorg-x11-server-Xorg \
+    xorg-x11-server-Xvfb
 
 RUN yum install -y epel-release && \
     yum -y install \
