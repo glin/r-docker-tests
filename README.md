@@ -2,6 +2,26 @@
 
 Extended test suite for the R Docker images.
 
+Run all tests:
+```sh
+make test-all
+```
+
+Run individual tests:
+```sh
+# Run a Shiny app
+make test-all TEST=shiny
+
+# Compile R Markdown doc to HTML/PDF
+make test-all TEST=rmarkdown
+
+# Run tests/examples from Tidyverse packages
+make test-all TEST=tidyverse
+
+# Plot to a virtual X server
+make test-all TEST=x11
+```
+
 ### Building Images
 ```bash
 # Build and test all images
